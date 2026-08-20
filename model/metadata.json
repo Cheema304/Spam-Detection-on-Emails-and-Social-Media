@@ -1,0 +1,48 @@
+{
+  "model_version": "20260820-210457",
+  "trained_at_utc": "2026-08-20T21:04:57+00:00",
+  "dataset_kind": "real_public_data",
+  "dataset_file": "real_combined.csv",
+  "dataset_sha256": "8818ee367312ca01b2b47e0e193780eecf4eb3e753e022d212b9ba4651b6aceb",
+  "dataset_rows": 4694,
+  "spam_rows": 1318,
+  "ham_rows": 3376,
+  "email_spam_rows": 481,
+  "email_ham_rows": 2472,
+  "social_spam_rows": 837,
+  "social_ham_rows": 904,
+  "test_rows": 1174,
+  "train_rows": 3520,
+  "test_size": 0.25,
+  "random_state": 42,
+  "split_strategy": "stratified hold-out by source channel and class label",
+  "best_key": "tf_idf__random_forest",
+  "active_key": "tf_idf__naive_bayes",
+  "active_vectorizer": "TF-IDF",
+  "active_model": "Naive Bayes",
+  "active_metrics": {
+    "key": "tf_idf__naive_bayes",
+    "vectorizer": "TF-IDF",
+    "model": "Naive Bayes",
+    "accuracy": 0.8884,
+    "precision": 0.9854,
+    "recall": 0.6121,
+    "f1": 0.7551,
+    "roc_auc": 0.9789
+  },
+  "data_sources": {
+    "SpamAssassin": {
+      "channel": "Email",
+      "publisher": "Apache SpamAssassin Public Corpus",
+      "url": "https://spamassassin.apache.org/old/publiccorpus/"
+    },
+    "UCI YouTube Spam Collection": {
+      "channel": "Social Media",
+      "publisher": "UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/380/youtube+spam+collection",
+      "doi": "10.24432/C58885",
+      "license": "CC BY 4.0"
+    }
+  },
+  "evaluation_note": "Metrics are computed from the labelled hold-out set created from the downloaded public datasets. They are recalculated whenever the models are retrained."
+}

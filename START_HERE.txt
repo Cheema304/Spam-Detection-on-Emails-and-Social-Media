@@ -1,0 +1,37 @@
+SpamShield AI — ICT942
+Spam Detection on Emails and Social Media
+REAL DATA + LIVE EVALUATION EDITION
+
+QUICK START (WINDOWS)
+1. Extract this ZIP.
+2. Double-click run_windows.bat.
+3. On the FIRST run the project downloads two public labelled datasets:
+   - Apache SpamAssassin Public Corpus (Email)
+   - UCI YouTube Spam Collection (Social Media)
+4. It combines the real data locally and trains/evaluates all 8 ML pipelines.
+5. The browser opens automatically at http://127.0.0.1:8080
+
+IMPORTANT
+There are no bundled demo evaluation numbers. The Model Lab and Analytics pages are populated from freshly computed model-evaluation files produced by training on the downloaded real public datasets.
+
+LIVE CHARTS
+The evaluation graphs are not pre-attached screenshots. Matplotlib renders SVG charts from the current evaluation data whenever the page requests them. Confusion matrix, ROC and channel-performance charts follow the currently ACTIVE model. The live usage chart reads the SQLite prediction database.
+
+MODELS
+Bag of Words and TF-IDF are each evaluated with:
+- Naive Bayes
+- Logistic Regression
+- Calibrated Linear SVM
+- Random Forest
+
+The best model is activated automatically after training. On the Model Lab page you can switch the active model and immediately use that model for new predictions.
+
+RETRAIN
+Open Model Lab and click "Retrain all 8 models on real data". All metrics and live charts refresh from the new evaluation.
+
+TEST EVERYTHING
+Open Command Prompt in the project folder and run:
+  .venv\Scripts\activate
+  python scripts\run_tests.py
+
+The test runner will also perform first-time real-data setup if needed.

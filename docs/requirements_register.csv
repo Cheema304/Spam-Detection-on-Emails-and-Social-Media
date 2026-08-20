@@ -1,0 +1,25 @@
+Requirement ID,Category,Priority,Requirement,Stakeholder,Acceptance Criterion,Evidence/Test
+FR-01,Functional,High,User can select Email or Social Media as the source channel.,End User,Source control is visible and accepted by /detect.,UI-01
+FR-02,Functional,High,User can submit message text for analysis.,End User,"Valid text is accepted up to 8,000 characters.",UI-02
+FR-03,Functional,High,"System securely normalises text and tokenises URLs, emails, currency and numbers.",System,Preprocessing test passes and content is never executed.,TEST-01
+FR-04,Functional,High,System transforms text using the deployed vectorizer and machine-learning pipeline.,System,Loaded model returns a class for valid text.,TEST-02
+FR-05,Functional,High,System classifies each message as Spam or Not Spam.,End User,Result page displays exactly one class.,TEST-03
+FR-06,Functional,High,"System displays confidence, spam probability and a risk level.",End User,Result includes numeric scores and Low/Medium/High risk.,TEST-04
+FR-07,Functional,Medium,System displays positive spam-indicative model signal terms where available.,End User,Result includes model-derived signals without claiming causal certainty.,TEST-05
+FR-08,Functional,High,System stores UI/API predictions in SQLite history.,Project Team,Successful prediction creates a history record.,TEST-06
+FR-09,Functional,Medium,"User can search/filter prediction history by text, result and source.",End User,History filters return matching rows.,TEST-07
+FR-10,Functional,High,System displays live graphical analytics and evaluation charts.,Stakeholders,Analytics page loads Matplotlib SVG charts rendered from current evaluation/SQLite data.,TEST-08
+FR-11,Functional,High,Training workflow compares Bag of Words and TF-IDF across four classifiers.,Project Team,evaluation.json contains eight comparable pipelines.,TEST-09
+FR-12,Functional,Medium,External systems can request a JSON prediction through /api/predict.,Integration User,Valid JSON returns HTTP 200 and prediction payload.,TEST-10
+FR-13,Functional,Low,External monitoring can check model availability through /api/health.,Administrator,Health endpoint returns model_loaded=true.,TEST-11
+FR-14,Functional,High,Project team can download the configured real public datasets and retrain all eight model pipelines.,ML Engineer,fetch_real_data.py builds the combined Email/Social dataset and train.py regenerates current evaluation artifacts.,TEST-12
+FR-15,Functional,Medium,User can activate any of the eight evaluated pipelines for live inference.,Project Team,Model Lab activation updates metadata and subsequent predictions/charts use the selected model.,TEST-14
+NFR-01,Security,High,Submitted content must be treated as inert text and must never be executed or followed.,All Stakeholders,No code path opens URLs or evaluates message content.,SEC-01
+NFR-02,Security,High,HTML output must be escaped and security response headers must be present.,All Stakeholders,Security header test passes and user text is escaped.,SEC-02
+NFR-03,Privacy,High,Prototype binds to localhost by default and stores prediction history locally.,End User,Default host is 127.0.0.1 and SQLite is local.,SEC-03
+NFR-04,Performance,Medium,Normal single-message inference target is less than 2 seconds on the project development machine.,End User,Measured processing_ms remains below agreed threshold in acceptance testing.,PERF-01
+NFR-05,Reliability,High,"Invalid, empty or oversized input must fail safely with a clear error.",End User,Validation tests pass without application crash.,TEST-13
+NFR-06,Usability,Medium,UI must be responsive and understandable on desktop and mobile-width screens.,End User,Manual acceptance test on at least two viewport sizes.,UX-01
+NFR-07,Maintainability,Medium,"Code must be modular with separate preprocessing, model, database, security, views and server modules.",Project Team,Repository structure follows documented modules.,CODE-01
+NFR-08,Traceability,High,"Training metadata must record model version, dataset fingerprint, source/channel class counts and active/best model metrics.",Supervisor,metadata.json contains all traceability fields.,TRACE-01
+NFR-09,Reproducibility,High,Model comparison must use a fixed random state and consistent split.,Supervisor,metadata records random_state=42 and common split logic is used.,TRACE-02

@@ -1,0 +1,8 @@
+Threat,Scenario,Vulnerability,Impact,Likelihood,Implemented/Planned Control,Residual Risk
+C-01,Phishing/scam message,Evolving social-engineering text,Credential theft or financial loss,High,ML spam classification + user risk feedback,Medium
+C-02,Adversarial text evasion,Model relies mainly on word/ngram features,Spam bypasses classifier,Medium,Normalisation + adversarial testing + future character features,Medium
+C-03,Stored-message disclosure,Local SQLite contains raw submitted text,Privacy breach,Medium,"Local-only binding, minimise retention, deployment access controls",Medium
+C-04,Cross-site scripting through message text,Untrusted message rendered in browser,Browser compromise/session abuse,Low,HTML escaping + CSP + no inline script from user content,Low
+C-05,Oversized request abuse,Server accepts arbitrary request bodies,Resource exhaustion,Low,"64 KB request-body cap + 8,000-character message limit",Low
+C-06,Poisoned retraining dataset,Unvalidated training input,Degraded or manipulated model,Medium,"Dataset provenance, fingerprinting, review and version control",Medium
+C-07,Malicious URL interaction,Message contains phishing links,User redirected to malicious site,Low,URLs are tokenised; application never follows or makes them clickable,Low

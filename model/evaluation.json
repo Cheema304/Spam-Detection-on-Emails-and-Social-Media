@@ -1,0 +1,82 @@
+[
+  {
+    "key": "tf_idf__random_forest",
+    "vectorizer": "TF-IDF",
+    "model": "Random Forest",
+    "accuracy": 0.9736,
+    "precision": 0.9807,
+    "recall": 0.9242,
+    "f1": 0.9516,
+    "roc_auc": 0.9917
+  },
+  {
+    "key": "bag_of_words__random_forest",
+    "vectorizer": "Bag of Words",
+    "model": "Random Forest",
+    "accuracy": 0.9727,
+    "precision": 0.9745,
+    "recall": 0.9273,
+    "f1": 0.9503,
+    "roc_auc": 0.9901
+  },
+  {
+    "key": "tf_idf__linear_svm",
+    "vectorizer": "TF-IDF",
+    "model": "Linear SVM",
+    "accuracy": 0.9685,
+    "precision": 0.948,
+    "recall": 0.9394,
+    "f1": 0.9437,
+    "roc_auc": 0.9936
+  },
+  {
+    "key": "tf_idf__logistic_regression",
+    "vectorizer": "TF-IDF",
+    "model": "Logistic Regression",
+    "accuracy": 0.9668,
+    "precision": 0.9619,
+    "recall": 0.9182,
+    "f1": 0.9395,
+    "roc_auc": 0.9906
+  },
+  {
+    "key": "bag_of_words__logistic_regression",
+    "vectorizer": "Bag of Words",
+    "model": "Logistic Regression",
+    "accuracy": 0.9583,
+    "precision": 0.9323,
+    "recall": 0.9182,
+    "f1": 0.9252,
+    "roc_auc": 0.9771
+  },
+  {
+    "key": "bag_of_words__linear_svm",
+    "vectorizer": "Bag of Words",
+    "model": "Linear SVM",
+    "accuracy": 0.937,
+    "precision": 0.9238,
+    "recall": 0.8455,
+    "f1": 0.8829,
+    "roc_auc": 0.9626
+  },
+  {
+    "key": "bag_of_words__naive_bayes",
+    "vectorizer": "Bag of Words",
+    "model": "Naive Bayes",
+    "accuracy": 0.9259,
+    "precision": 0.8809,
+    "recall": 0.8515,
+    "f1": 0.8659,
+    "roc_auc": 0.9715
+  },
+  {
+    "key": "tf_idf__naive_bayes",
+    "vectorizer": "TF-IDF",
+    "model": "Naive Bayes",
+    "accuracy": 0.8884,
+    "precision": 0.9854,
+    "recall": 0.6121,
+    "f1": 0.7551,
+    "roc_auc": 0.9789
+  }
+]

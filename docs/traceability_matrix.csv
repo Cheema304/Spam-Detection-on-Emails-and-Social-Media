@@ -1,0 +1,25 @@
+Requirement ID,Priority,Implementation,Acceptance Criterion,Evidence/Test,Status
+FR-01,High,spamshield/views.py + server.py,Source control is visible and accepted by /detect.,UI-01,Implemented
+FR-02,High,views.py + security.py,"Valid text is accepted up to 8,000 characters.",UI-02,Implemented
+FR-03,High,preprocess.py,Preprocessing test passes and content is never executed.,TEST-01,Implemented
+FR-04,High,model.py,Loaded model returns a class for valid text.,TEST-02,Implemented
+FR-05,High,model.py + views.py,Result page displays exactly one class.,TEST-03,Implemented
+FR-06,High,model.py + views.py,Result includes numeric scores and Low/Medium/High risk.,TEST-04,Implemented
+FR-07,Medium,model.py + views.py,Result includes model-derived signals without claiming causal certainty.,TEST-05,Implemented
+FR-08,High,db.py + server.py,Successful prediction creates a history record.,TEST-06,Implemented
+FR-09,Medium,db.py + views.py,History filters return matching rows.,TEST-07,Implemented
+FR-10,High,live_charts.py + views.py + server.py,Analytics page loads Matplotlib SVG charts rendered from current evaluation and SQLite state.,TEST-08,Implemented
+FR-11,High,training.py + scripts/train.py,evaluation.json contains eight comparable pipelines evaluated on one source/class-stratified hold-out split.,TEST-09,Implemented
+FR-12,Medium,server.py,Valid JSON returns HTTP 200 and prediction payload.,TEST-10,Implemented
+FR-13,Low,server.py,Health endpoint returns model_loaded=true.,TEST-11,Implemented
+FR-14,High,datasets.py + scripts/fetch_real_data.py + training.py,Real public Email and Social Media data can be rebuilt and all evaluation artifacts regenerated.,TEST-12,Implemented
+FR-15,Medium,model.py + server.py + views.py,Model Lab can activate any evaluated pipeline and live predictions/charts use it.,TEST-14,Implemented
+NFR-01,High,preprocess.py + server.py,No code path opens URLs or evaluates message content.,SEC-01,Implemented
+NFR-02,High,security.py + views.py,Security header test passes and user text is escaped.,SEC-02,Implemented
+NFR-03,High,run.py + db.py,Default host is 127.0.0.1 and SQLite is local.,SEC-03,Implemented
+NFR-04,Medium,model.py,Measured processing_ms remains below agreed threshold in acceptance testing.,PERF-01,Implemented
+NFR-05,High,security.py + server.py,Validation tests pass without application crash.,TEST-13,Implemented
+NFR-06,Medium,web/static/style.css,Manual acceptance test on at least two viewport sizes.,UX-01,Implemented
+NFR-07,Medium,spamshield/*,Repository structure follows documented modules.,CODE-01,Implemented
+NFR-08,High,training.py,metadata.json records dataset hash/channel counts/model version/best and active models.,TRACE-01,Implemented
+NFR-09,High,scripts/train.py,metadata records random_state=42 and common split logic is used.,TRACE-02,Implemented

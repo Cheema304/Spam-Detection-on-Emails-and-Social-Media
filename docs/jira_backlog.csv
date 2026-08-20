@@ -1,0 +1,44 @@
+Issue Key,Issue Type,Summary,Epic Link,Assignee,Target,Priority,Status
+EPIC-W1,Epic,Week 1 Project Charter & Stakeholders,,Member 1,Week 1,High,To Do
+W1-01,Task,Create GitHub repository and invite supervisor,EPIC-W1,Member 1,Week 1,High,To Do
+W1-02,Task,Create Jira project and invite supervisor,EPIC-W1,Member 1,Week 1,High,To Do
+W1-03,Task,Document project overview/background evidence,EPIC-W1,Member 1,Week 1,High,To Do
+W1-04,Task,"Define objectives, scope and success criteria",EPIC-W1,Member 1,Week 1,High,To Do
+W1-05,Task,Create stakeholder interest/influence matrix,EPIC-W1,Member 1,Week 1,High,To Do
+EPIC-W2,Epic,Week 2 Business & Problem Analysis,,Member 2,Week 2,High,To Do
+W2-01,Task,Research organisation/industry context from valid sources,EPIC-W2,Member 2,Week 2,High,To Do
+W2-02,Task,Map current process and existing challenges,EPIC-W2,Member 2,Week 2,High,To Do
+W2-03,Task,Perform root-cause analysis,EPIC-W2,Member 2,Week 2,High,To Do
+W2-04,Task,Create SWOT analysis,EPIC-W2,Member 2,Week 2,Medium,To Do
+W2-05,Task,Summarise business requirements,EPIC-W2,Member 2,Week 2,High,To Do
+EPIC-W3,Epic,Week 3 Requirements Elicitation,,Member 3,Week 3,High,To Do
+W3-01,Task,Record elicitation methods and source evidence,EPIC-W3,Member 3,Week 3,High,To Do
+W3-02,Task,Validate stakeholder requirements register,EPIC-W3,Member 3,Week 3,High,To Do
+W3-03,Task,Prioritise functional requirements,EPIC-W3,Member 3,Week 3,High,To Do
+W3-04,Task,Prioritise non-functional requirements,EPIC-W3,Member 3,Week 3,High,To Do
+W3-05,Task,Document assumptions and constraints,EPIC-W3,Member 3,Week 3,Medium,To Do
+EPIC-W4,Epic,Week 4 Software Requirements Specification,,Member 3,Week 4,High,To Do
+W4-01,Task,Document system overview and architecture,EPIC-W4,Member 3,Week 4,High,To Do
+W4-02,Task,Document use cases and alternate flows,EPIC-W4,Member 3,Week 4,High,To Do
+W4-03,Task,Complete acceptance criteria and traceability matrix,EPIC-W4,Member 3,Week 4,High,To Do
+EPIC-W5,Epic,Week 5 Feasibility & Risk Analysis,,Member 4,Week 5,High,To Do
+W5-01,Task,Technical/economic/operational/legal feasibility evidence,EPIC-W5,Member 4,Week 5,High,To Do
+W5-02,Task,Validate project risk register,EPIC-W5,Member 4,Week 5,High,To Do
+W5-03,Task,Complete cybersecurity risk assessment,EPIC-W5,Member 4,Week 5,High,To Do
+W5-04,Task,Document recommendations and next steps,EPIC-W5,Member 4,Week 5,High,To Do
+EPIC-ML,Epic,Machine Learning & Data,,Member 2,Weeks 2-8,High,In Progress
+ML-01,Task,Identify and licence-check real email spam dataset,EPIC-ML,Member 2,Week 3,High,To Do
+ML-02,Task,Identify and licence-check real social-media spam dataset,EPIC-ML,Member 2,Week 3,High,To Do
+ML-03,Task,Clean/deduplicate and document combined dataset,EPIC-ML,Member 2,Week 4,High,To Do
+ML-04,Task,Run 8-pipeline model benchmark,EPIC-ML,Member 2,Week 5,High,Done
+ML-05,Task,Retrain final model on cited real dataset,EPIC-ML,Member 2,Week 7,High,To Do
+EPIC-UI,Epic,Frontend & Integration,,Member 3,Weeks 3-8,Medium,In Progress
+UI-01,Task,Build responsive dashboard and navigation,EPIC-UI,Member 3,Week 4,Medium,Done
+UI-02,Task,Build detector result/risk/explainability UI,EPIC-UI,Member 3,Week 4,High,Done
+UI-03,Task,Build history and filtering interface,EPIC-UI,Member 3,Week 5,Medium,Done
+UI-04,Task,Build analytics and model-lab visualisations,EPIC-UI,Member 3,Week 5,Medium,Done
+EPIC-QA,Epic,Cybersecurity & Testing,,Member 4,Weeks 4-9,High,In Progress
+QA-01,Task,Implement input validation and security headers,EPIC-QA,Member 4,Week 5,High,Done
+QA-02,Task,Implement automated unit/integration tests,EPIC-QA,Member 4,Week 5,High,Done
+QA-03,Task,Adversarial and edge-case test campaign,EPIC-QA,Member 4,Week 7,High,To Do
+QA-04,Task,User acceptance testing with representative users,EPIC-QA,Member 4,Week 8,Medium,To Do
