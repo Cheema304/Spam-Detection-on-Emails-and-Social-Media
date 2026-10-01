@@ -1,6 +1,6 @@
-# ICT942 Assessment 1 Alignment Map
+## Assessment 3 Project Update
 
-This file is a **planning/evidence map**, not a submission-ready report.
+This section tracks the review and update of the SpamShield AI project scope, objectives and success criteria for Assessment 3. The project boundaries, constraints and expected outcomes will be reviewed against the current implemented prototype and project evidence.
 
 ## Week 1 — Project Charter and Stakeholder Analysis
 Evidence to maintain:
