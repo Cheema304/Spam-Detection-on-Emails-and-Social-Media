@@ -1,11 +1,11 @@
-Risk ID,Risk Description,Probability,Impact,Owner,Mitigation,Contingency,Status
-R-01,Unrepresentative or biased training data,Medium,High,ML Engineer,Use diverse cited email/social datasets; inspect class/source balance; document limitations.,Retrain and report affected metrics.,Open
-R-02,Train/test leakage or duplicate messages,Medium,High,ML Engineer,Deduplicate data before split and keep consistent isolated test set.,Recreate split and rerun all metrics.,Open
-R-03,False positives classify legitimate messages as spam,Medium,High,ML + QA,"Prioritise precision analysis, inspect confusion matrix, tune threshold with client needs.",Add review/allow-list process in future deployment.,Open
-R-04,Concept drift as spam language changes,High,Medium,ML Engineer,Version datasets/models and schedule periodic retraining/evaluation.,Rollback to prior model while retraining.,Open
-R-05,Adversarial obfuscation evades text classifier,Medium,High,Cybersecurity Engineer,"Test URL obfuscation, spacing, Unicode/noise and adversarial samples.",Add supplementary heuristics/character features in future iteration.,Open
-R-06,Stored messages expose private/sensitive content,Medium,High,Cybersecurity Engineer,"Local-only storage, data-minimisation, retention policy, access controls for deployment.",Delete affected records and investigate exposure.,Open
-R-07,Dependency vulnerability in ML libraries,Low,High,Cybersecurity Engineer,"Pin compatible major versions, review dependency advisories and update safely.",Patch dependency and rerun tests.,Open
+Risk ID,Risk Description,Probability,Impact,Risk Score,Risk Rating,Owner,Mitigation,Contingency,Status
+R-01,Unrepresentative or biased training data,Medium,High,6,High,ML Engineer,Use diverse cited email/social datasets; inspect class/source balance; document limitations.,Retrain and report affected metrics.,Open
+R-02,Train/test leakage or duplicate messages,Medium,High,6,High,ML Engineer,Deduplicate data before split and keep consistent isolated test set.,Recreate split and rerun all metrics.,Open
+R-03,False positives classify legitimate messages as spam,Medium,High,6,High,ML + QA,"Prioritise precision analysis, inspect confusion matrix, tune threshold with client needs.",Add review/allow-list process in future deployment.,Open
+R-04,Concept drift as spam language changes,High,Medium,6,High,ML Engineer,Version datasets/models and schedule periodic retraining/evaluation.,Rollback to prior model while retraining.,Open
+R-05,Adversarial obfuscation evades text classifier,Medium,High,6,High,Cybersecurity Engineer,"Test URL obfuscation, spacing, Unicode/noise and adversarial samples.",Add supplementary heuristics/character features in future iteration.,Open
+R-06,Stored messages expose private/sensitive content,Medium,High,6,High,Cybersecurity Engineer,"Local-only storage, data-minimisation, retention policy, access controls for deployment.",Delete affected records and investigate exposure.,Open
+R-07,Dependency vulnerability in ML libraries,Low,High,3,Medium,Cybersecurity Engineer,"Pin compatible major versions, review dependency advisories and update safely.",Patch dependency and rerun tests.,Open
 R-08,Project schedule delay,Medium,Medium,Project Lead,"Weekly Jira tracking, clear owners, small sprint tasks and early risk escalation.",Reprioritise low-value scope and escalate blocker.,Open
 R-09,Contribution concentrated in one team member,Medium,High,Project Lead,Allocate owned Jira tasks and require regular commits/pull requests from all four members.,Rebalance tasks and document recovery plan.,Open
 R-10,Git merge conflicts or lost work,Medium,Medium,All Members,"Feature branches, pull requests, frequent pulls and small commits.",Resolve via reviewed merge/revert.,Open
